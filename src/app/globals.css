@@ -482,6 +482,84 @@ header a:hover {
   opacity: .7;
   transition: all .8s;
 }
+/* WHY DUBAI */
+.why-dubai {
+  background: linear-gradient(180deg, #151715 35.58%, #151715 100%), #221F1C;
+  height: 890px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.why-dubai img {
+  color: transparent;
+  width: 100vw;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.moon {
+  width: 408px;
+  height: 408px;
+  background: white;
+  border-radius: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
+  bottom: -396px;
+  z-index: -2;
+  /* box-shadow: 0px 0px 76px 46px #ffffff45; */
+  transition: all 1s;
+}
+.moon::after {
+  border-radius: 50%;
+  width: 90vw;
+  height: 751px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -396px;
+  content: '';
+  filter: blur(80px);
+  opacity: .4;
+  background: radial-gradient(#ffffff70 29%, #ffffff00 50%, #ffffff00 100%);
+  opacity: 0;
+  transition: all 1s;
+}
+.why-dubai:hover .moon, .why-dubai:hover .moon::after {
+  bottom: -96px;
+  opacity: 1;
+  transition: all 1s;
+}
+.why-dubai img:last-child {
+  opacity: 0;
+  transition: all 1s;
+  filter: drop-shadow(1px 1px #ffffff8c);
+  z-index: -1;
+}
+.why-dubai:hover img:last-child {
+  opacity: 1;
+  transition: all 1s;
+}
+.why-dubai--content {
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  top: 300px;
+  transition: all 1s;
+}
+.why-dubai:hover .why-dubai--content {
+  top: 200px;
+}
+.why-dubai--content h2 {
+  margin-bottom: 0;
+  transition: all 1s;
+}
 
 
 @keyframes rotate {

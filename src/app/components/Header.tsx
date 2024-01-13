@@ -5,8 +5,8 @@ import Link from 'next/link';
 // CSS
 // import '../styles/header.css'
 // IMAGES
-// import Logo from '../../../public/logo.svg'
-// import EndIcon from '../../../public/end-icon.svg'
+import Logo from '../../../public/logo.svg'
+import EndIcon from '../../../public/end-icon.svg'
 
 const Header: FC = () => {
     return (
@@ -14,12 +14,12 @@ const Header: FC = () => {
             <div className="container">
                 <div className="flex">
                     <Link href='/' className='logo'>
-                        {/* <Logo /> */}
+                        <Logo />
                     </Link>
                     <div className="nav-list">
                         <div className="services">
                             <Link href={'/'} className='nav-list--item services'>
-                                {/* Services <EndIcon /> */}
+                                Services <EndIcon />
                             </Link>
                             <div className="services-div">
                                 <div className="services-div--inner">

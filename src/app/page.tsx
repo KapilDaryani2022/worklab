@@ -1,10 +1,12 @@
 import Image from 'next/image'
-// import ChevronRight from '../../public/chevron-rigjt.svg';
-// import Traingle from '../../public/triangle.svg';
-// import Rocket from '../../public/rocket.svg';
-// import Clouds from '../../public/clouds.svg';
-// import TeamWork from '../../public/team-work.svg';
-// import Eagle from '../../public/eagle.svg';
+import ChevronRight from '../../public/chevron-rigjt.svg';
+import Traingle from '../../public/triangle.svg';
+import Rocket from '../../public/rocket.svg';
+import Clouds from '../../public/clouds.svg';
+import TeamWork from '../../public/team-work.svg';
+import Eagle from '../../public/eagle.svg';
+import Buildings from '../../public/builidings.png';
+import Buildings2 from '../../public/builidings-2.png';
 import Link from 'next/link';
 
 export default function Home() {
@@ -13,8 +15,8 @@ export default function Home() {
     <main>
       <section className='hero'>
         <div className="container">
-          {/* <Traingle className='triangle' /> */}
-          {/* <Traingle className='triangle big' /> */}
+          <Traingle className='triangle' />
+          <Traingle className='triangle big' />
           <span className='medium-circle'></span>
         </div>
         <div className="content">
@@ -25,7 +27,7 @@ export default function Home() {
           <p>Experience a hassle-free journey to establish your business in the UAE with our expert guidance.</p>
           <div className="flex">
             <input placeholder='Your Business Name' type="text" name='businessName' />
-            {/* <button className='btn-primary'>Start Your Business <ChevronRight /></button> */}
+            <button className='btn-primary'>Start Your Business <ChevronRight /></button>
           </div>
         </div>
       </section>
@@ -50,10 +52,10 @@ export default function Home() {
               <div>
                 <div className='rocket'>
                   <div>
-                    {/* <Rocket /> */}
+                    <Rocket />
                   </div>
                 </div>
-                {/* <Clouds className='clouds' /> */}
+                <Clouds className='clouds' />
               </div>
             </div>
             <div className="services-provide--list--item">
@@ -67,7 +69,7 @@ export default function Home() {
                 </ul>
               </div>
               <div>
-                {/* <TeamWork className='team-work' /> */}
+                <TeamWork className='team-work' />
               </div>
             </div>
             <div className="services-provide--list--item">
@@ -83,13 +85,25 @@ export default function Home() {
               <div>
                 <div className="eagle">
                   <div>
-                    {/* <Eagle /> */}
+                    <Eagle />
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
+      <section className='why-dubai'>
+        <div className="container">
+          <div className="why-dubai--content">
+            <h2>Why <br /> Dubaaaaaaaaaaai ?!</h2>
+            <p>Where Innovation Meets Limitless Horizons.</p>
+            <Link className='learn-more' href='/'>{link}</Link>
+          </div>
+        </div>
+        <div className="moon"></div>
+        <Image src={Buildings} alt='builings' />
+        <Image src={Buildings} alt='builings' />
       </section>
     </main>
   )
