@@ -6,10 +6,10 @@ import Clouds from '../../public/clouds.svg';
 import TeamWork from '../../public/team-work.svg';
 import Eagle from '../../public/eagle.svg';
 import Buildings from '../../public/builidings.png';
-import Value1 from '../../public/value-1.png';
+import Value1 from '../../public/value-1.webp';
 import Value2 from '../../public/value-2.png';
-import Value3 from '../../public/value-3.png';
-import Value4 from '../../public/value-4.png';
+import Value3 from '../../public/value-3.webp';
+import Value4 from '../../public/value-4.webp';
 import WImage from '../../public/w.png';
 import Link from 'next/link';
 
@@ -176,6 +176,7 @@ export default function Home() {
             </p>
             <Image src={WImage} alt='/' className='why-us--content--image' />
           </div>
+          <div className="why-us-circle"></div>
         </div>
       </section>
     </main>

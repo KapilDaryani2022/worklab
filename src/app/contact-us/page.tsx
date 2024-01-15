@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link';
-import ContactUsImage from '../../../public/contact-us-image.png';
+import ContactUsImage from '../../../public/contact-us-image.webp';
 import Location from '../../../public/location.svg';
 import Contact from '../../../public/contact.svg';
 import Social from '../../../public/social.svg';

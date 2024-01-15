@@ -310,7 +310,7 @@ header a:hover {
   transform-origin: 405px center;
   position: absolute;
   left: calc(50vw - 413px);
-  animation: rotate 10s linear infinite;
+  animation: rotate 15s linear infinite;
   opacity: .4;
   z-index: -1;
   top: 512px;
@@ -339,7 +339,7 @@ header a:hover {
 }
 /* PROVIDE SECTION */
 .provide-section {
-  background-image: url('../../public/service-bg.png');
+  background-image: url('../../public/service-bg.webp');
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -568,6 +568,37 @@ header a:hover {
   margin-bottom: 0;
   transition: all 1s;
 }
+.why-us-circle {
+  border: 1px solid #CCC;
+  position: absolute;
+  right: 5px;
+  bottom: -202px;
+  width: 916px;
+  height: 916px;
+  border-radius: 50%;
+  z-index: -1;
+}
+.why-us-circle::before {
+  border: 1px solid #CCC;
+  width: 792px;
+  height: 792px;
+  border-radius: 50%;
+  position: absolute;
+  content: '';
+  right: 64px;
+  bottom: 56px;
+}
+.why-us-circle::after {
+  border: 1px solid #CCC;
+  width: 1018px;
+  height: 1018px;
+  border-radius: 50%;
+  position: absolute;
+  content: '';
+  right: -51px;
+  bottom: -59px;
+}
+
 /* OUR VALUES */
 .our-values {
   background-color: #101210;
@@ -712,7 +743,7 @@ footer .container {
   content: '';
   top: 0;
   left: 0;
-  background: url('../../public/contact-bg.png'), #d3d3d300 0px -210px / 100% 192.308% no-repeat;
+  background: url('../../public/contact-bg.webp'), #d3d3d300 0px -210px / 100% 192.308% no-repeat;
   mix-blend-mode: color-dodge;
   background-size: cover;
   background-position: center;
@@ -831,9 +862,14 @@ footer .container {
 .contact-us-inner {
   padding: 60px 50px;
   border-radius: 16px;
-  background: #181B18;
+  background-color: #181B18;
   display: flex;
   justify-content: space-between;
+
+  background-image: url('../../public/contact-us-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .contact-us-form {
   width: 484px;
@@ -936,10 +972,10 @@ footer .container {
 .reach-out-inner a:hover {
   color: #25201D;
 }
-.reach-out-iframe, .reach-out-iframe > div {
+.reach-out-iframe, .reach-out-iframe > iframe {
   width: 100% !important;
+  border: none !important;
 }
-
 
 @keyframes rotate {
   100% {
