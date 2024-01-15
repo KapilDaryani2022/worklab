@@ -75,7 +75,16 @@ export default function ContactUs() {
                         </div>
                     </div>
                     <div className='reach-out-iframe'>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.3311172515173!2d55.40118207415092!3d25.124494034643963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f63cac34a2433%3A0x512986a8b6946d2c!2sSilicon%20Oasis!5e0!3m2!1sen!2sin!4v1705261221522!5m2!1sen!2sin" width="600" height="451" style={{border:0}} allowfullscreen={true} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.3311172515173!2d55.40118207415092!3d25.124494034643963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f63cac34a2433%3A0x512986a8b6946d2c!2sSilicon%20Oasis!5e0!3m2!1sen!2sin!4v1705261221522!5m2!1sen!2sin" width="600" height="451" style={{border:0}} allowfullscreen={true} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.3311172515173!2d55.40118207415092!3d25.124494034643963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f63cac34a2433%3A0x512986a8b6946d2c!2sSilicon%20Oasis!5e0!3m2!1sen!2sin!4v1705261221522!5m2!1sen!2sin"
+                            width="600"
+                            height="451"
+                            style={{ border: 'your-border' }}
+                            allowFullScreen={true}
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                        />
                     </div>
                 </div>
             </div>
