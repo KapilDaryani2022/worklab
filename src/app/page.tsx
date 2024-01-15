@@ -6,7 +6,11 @@ import Clouds from '../../public/clouds.svg';
 import TeamWork from '../../public/team-work.svg';
 import Eagle from '../../public/eagle.svg';
 import Buildings from '../../public/builidings.png';
-import Buildings2 from '../../public/builidings-2.png';
+import Value1 from '../../public/value-1.png';
+import Value2 from '../../public/value-2.png';
+import Value3 from '../../public/value-3.png';
+import Value4 from '../../public/value-4.png';
+import WImage from '../../public/w.png';
 import Link from 'next/link';
 
 export default function Home() {
@@ -104,6 +108,75 @@ export default function Home() {
         <div className="moon"></div>
         <Image src={Buildings} alt='builings' />
         <Image src={Buildings} alt='builings' />
+      </section>
+      <section className='our-values'>
+        <div className="container">
+          <div className='heading-section'>
+            <h2>Our Values</h2>
+            <p>We give services that you require and is best for you! </p>
+          </div>
+          <div className="our-value-cards">
+            <div className="our-value-card">
+              <div className="our-value-card--content">
+                <h3>Flexible</h3>
+                <p>At Worklab, we follow the value of flexibility to empower your business journey. Our advanced setup adapts to your ever-growing needs in your business setup.
+                <br/><br/>Our service is open to all, whether you are a startup or an established enterprise. We believe in fostering creativity and collaboration.</p>
+              </div>
+              <div className="our-value-card--image">
+                <Image src={Value1} alt='' />
+              </div>
+            </div>
+            <div className="our-value-card">
+              <div className="our-value-card--content">
+                <h3>B2B <br/> Collaborations</h3>
+                <p>In the heart of B2B collaboration, Worklab is not just a business setup; it's a vibrant environment where ideas flourish. <br /><br /> We stand by the power of innovation through partnerships, and our business setup is crafted to facilitate seamless collaboration. Our team brings diverse talents together to create a flourishing community where businesses unite and grow.</p>
+              </div>
+              <div className="our-value-card--image">
+                <Image src={Value2} alt='' />
+              </div>
+            </div>
+            <div className="our-value-card">
+              <div className="our-value-card--content">
+                <h3>Marketing <br /> and Branding</h3>
+                <p>Your brand is your identity, and at Worklab, we take pride in nurturing that identity through strategic marketing skills and branding support. We offer your brand a platform to showcase your uniqueness.<br/><br/> Our dedicated marketing resources help boost your brand's presence, ensuring that your business stands out in a crowded marketplace. From personalized events to campaigns, we've got your brand covered.</p>
+              </div>
+              <div className="our-value-card--image">
+                <Image src={Value3} alt='' />
+              </div>
+            </div>
+            <div className="our-value-card">
+              <div className="our-value-card--content">
+                <h3>Expertise</h3>
+                <p>With Worklab, expertise is not just a buzzword; it's the foundation of our commitment to your success. Our team comprises experts who understand the challenges businesses face.<br/><br/> From legal intricacies to strategic planning, we offer a wealth of knowledge to guide you through every stage of your business journey. Our team of experts are at your service to make your business thrive!</p>      
+              </div>
+              <div className="our-value-card--image">
+                  <Image src={Value4} alt='' width={411} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="why-us">
+        <div className="container">
+          <div className='heading-section'>
+            <h2>Why Us?</h2>
+            <p>Quality services unlike any service provides around here</p>
+          </div>
+          <div className="why-us--content">
+            <p>
+              At Worklab, we're more than just a business setup company; 
+              <br /><br />
+              We're your partners in creating digital success. 
+              <br /><br />
+              Choose us because we specialize in seamlessly launching your small business into the world of web.
+              <br /><br />
+              From establishing your dream business to mark its online presence to showcasing and selling your products on our e-commerce platforms, Worklab is committed to your business's digital transformation.
+              <br /><br />
+              When you choose Worklab, you choose success!
+            </p>
+            <Image src={WImage} alt='/' className='why-us--content--image' />
+          </div>
+        </div>
       </section>
     </main>
   )

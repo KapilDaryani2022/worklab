@@ -18,7 +18,7 @@ const Header: FC = () => {
                     </Link>
                     <div className="nav-list">
                         <div className="services">
-                            <Link href={'/'} className='nav-list--item services'>
+                            <Link href='/' className='nav-list--item services'>
                                 Services <EndIcon />
                             </Link>
                             <div className="services-div">
@@ -55,10 +55,10 @@ const Header: FC = () => {
                                 </div>
                             </div>
                         </div>
-                        <Link href={'/'} className='nav-list--item'>Why Dubai</Link>
-                        <Link href={'/'} className='nav-list--item'>About Us</Link>
-                        <Link href={'/'} className='nav-list--item'>Community</Link>
-                        <Link href={'/'} className='nav-list--item'>Contact Us</Link>
+                        <Link href='/' className='nav-list--item'>Why Dubai</Link>
+                        <Link href='/' className='nav-list--item'>About Us</Link>
+                        <Link href='/' className='nav-list--item'>Community</Link>
+                        <Link href='/contact-us' className='nav-list--item'>Contact Us</Link>
                     </div>
                 </div>
             </div>
