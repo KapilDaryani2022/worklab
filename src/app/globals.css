@@ -15,7 +15,7 @@ body, html {
 }
 * {
   box-sizing: border-box;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
 }
@@ -234,7 +234,6 @@ header a:hover {
 }
 .services-div--list p {
   color: #C9C9C9;
-  font-family: 'Poppins', sans-serif;
   font-size: 12px;
   font-weight: 500;
   line-height: 26px;
@@ -358,7 +357,6 @@ header a:hover {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  font-family: 'Poppins', sans-serif;
   line-height: normal;
   text-decoration-line: underline;
   color: #009D46;
@@ -654,7 +652,6 @@ header a:hover {
 }
 .our-value-card--content p {
   color: #FFF;
-  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 160%;
@@ -688,7 +685,6 @@ header a:hover {
 }
 .why-us .why-us--content p {
   color: #25201D;
-  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 500;
   line-height: 31px;
@@ -779,7 +775,6 @@ footer .container {
 }
 .get-in-touch-contact p {
   color: #FFF;
-  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 170%;
@@ -793,7 +788,6 @@ footer .container {
 }
 .footer-bottom a {
   color: #FFF;
-  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 140%;
@@ -813,7 +807,6 @@ footer .container {
 .footer-bottom .lead {
   text-align: left;
   color: #FFF;
-  font-family: 'Poppins', sans-serif;
   font-size: 14px;
   font-weight: 500;
   line-height: 140%;
@@ -935,7 +928,6 @@ footer .container {
 }
 .reach-out-inner p, .reach-out-inner a {
   color: #565452;
-  font-family: 'Poppins', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -975,6 +967,295 @@ footer .container {
 .reach-out-iframe, .reach-out-iframe > iframe {
   width: 100% !important;
   border: none !important;
+}
+/* ABOUT BANNER */
+.about-page h2 {
+  color: #FFF;
+  line-height: 140%;
+  margin-bottom: 40px;
+}
+.about-banner .heading-section p {
+  max-width: 470px;
+  margin: 0 auto 20px;
+}
+.about-banner {
+  padding: 270px 0 130px;
+  background-color: #101310;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  overflow: hidden;
+}
+.about-banner::before {
+  position: absolute;
+  content: '';
+  background: rgba(0, 109, 48, 0.25);
+  filter: blur(200px);
+  width: 1063px;
+  height: 1063px;
+  border-radius: 50%;
+  top: -530px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+}
+.about-banner::after {
+  position: absolute;
+  content: '';
+  background: #0B2431;
+  filter: blur(200px);
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  bottom: -150px;
+  left: -100px;
+  z-index: -1;
+}
+.about-banner h1 {
+  color: #FFF;
+  text-align: center;
+  font-size: 54px;
+  font-weight: 500;
+  line-height: 160%;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.map-hope {
+  height: 764px;
+  background: linear-gradient(180deg, #101210 0%, rgba(16, 18, 16, 0.00) 44.5%, #101210 100%);
+  position: relative;
+  background-color: #101210;
+  z-index: 1;
+  overflow: hidden;
+}
+/* MAP HOPE */
+.map-hope .shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../../public/map-the-hope.png');
+}
+.map-hope::after {
+  border-radius: 578px;
+  background: rgb(0 70 109 / 35%);
+  filter: blur(150px);
+  width: 578px;
+  height: 578px;
+  position: absolute;
+  content: '';
+  top: 20px;
+  left: -155px;
+  z-index: -1;
+}
+.map-hope::before {
+  border-radius: 578px;
+  background: rgba(0, 70, 109, 0.28);
+  filter: blur(150px);
+  width: 578px;
+  height: 578px;
+  position: absolute;
+  content: '';
+  top: 50%;
+  transform: translateY(-50%);
+  right: -200px;
+  z-index: -1;
+}
+.map-hope h2 {
+  cursor: pointer;
+  color: #fff;
+  user-select: none;
+  text-align: center;
+  font-size: 90px;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 0;
+  background-image: url('../../public/maphope.gif');
+	background-size: cover;
+	color: transparent;
+	-moz-background-clip: text;
+	-webkit-background-clip: text;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+/* WHY WE BUILD */
+.why-we-build .flex > div:first-child {
+  max-width: 66%;
+}
+.why-we-build .flex > div:last-child {
+  padding-right: 50px;
+}
+.why-we-build .flex {
+  justify-content: space-between;
+}
+.why-we-build .flex > div:first-child p, .why-we-build .flex > div:first-child h2 {
+  text-align: left;
+}
+.why-we-build .flex > div:first-child p {
+  font-size: 16px;
+  line-height: 220%;
+  margin-bottom: 20px;
+}
+.why-we-build .flex > div:first-child p:last-child {
+  margin-bottom: 0;
+}
+.why-we-build .flex > div:first-child p:last-child {
+  margin-bottom: 0;
+}
+/* OUR MISSION */
+.our-mission {
+  padding: 150px 0 260px;
+}
+.our-mission h2 {
+  margin-bottom: 20px;
+  white-space: nowrap;
+}
+.our-mission .heading-section {
+  max-width: 562px;
+  margin: 0 auto 180px;
+}
+.our-mission .flex {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.our-mission p {
+  font-size: 16px;
+  line-height: 220%;
+}
+.our-mission .flex p {
+  max-width: 562px;
+  text-align: left;
+}
+/* OUR MISSION */
+.free-community {
+  padding: 270px 0;
+}
+.free-community h2 {
+  white-space: nowrap;
+}
+.free-community .flex {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.free-community p {
+  font-size: 16px;
+  line-height: 220%;
+  max-width: 562px;
+  text-align: left;
+}
+/* GLOBAL PROJECTS */
+.global-projects {
+  padding: 230px 0px;
+}
+.global-projects .flex {
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.global-projects p {
+  font-size: 16px;
+  line-height: 220%;
+  max-width: 562px;
+  text-align: left;
+}
+/* OUR VALUE */
+.about-our-values h2 {
+  margin-bottom: 20px;
+}
+.about-our-values .heading-section {
+  margin-bottom: 100px;
+}
+.about-our-values p {
+  font-size: 16px;
+  line-height: 220%;
+}
+.our-values-list {
+  gap: 40px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.our-values-list--item {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  background: #151715;
+  overflow: hidden;
+  height: 285px;
+  width: calc(50% - 20px);
+}
+.our-values-list--item--content {
+  padding: 10px 24px;
+  max-width: 285px;
+}
+.our-values-list--item--content p {
+  color: #B3B3B3;
+  font-size: 14px;
+  line-height: 160%;
+  text-align: left;
+}
+.our-values-list--item--content h3 {
+  color: #FFF;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  margin-bottom: 16px;
+  -webkit-text-stroke: 0;
+}
+/* OUR FOUNDERS */
+.our-founders H2 {
+  margin-bottom: 20px;
+}
+.our-founders .heading-section {
+  margin-bottom: 100px;
+}
+.our-founders--card {
+  gap: 40px;
+  margin-bottom: 100px;
+}
+.our-founders--card:last-child {
+  margin-bottom: 0;
+}
+.our-founders--card  h3{
+  color: #FFF;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 140%;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  -webkit-text-stroke: 0;
+  margin-bottom: 4px;
+}
+.founder--designation {
+  margin-bottom: 20px;
+  text-align: left;
+}
+.founder--designation + p {
+  font-size: 16px;
+  line-height: 160%;
+  text-align: left;
+}
+/* JOIN OUR COMMUNITY */
+.join-our-comunity button{
+  margin: 0 auto;
+}
+.join-our-comunity h2 {
+  margin-bottom: 10px;
+}
+.join-our-comunity p {
+  font-size: 16px;
+  line-height: 220%;
+}
+.join-our-comunity .heading-section {
+  max-width: 562px;
+  margin: 0 auto 30px;
 }
 
 @keyframes rotate {

@@ -56,7 +56,7 @@ const Header: FC = () => {
                             </div>
                         </div>
                         <Link href='/' className='nav-list--item'>Why Dubai</Link>
-                        <Link href='/' className='nav-list--item'>About Us</Link>
+                        <Link href='/about-us' className='nav-list--item'>About Us</Link>
                         <Link href='/' className='nav-list--item'>Community</Link>
                         <Link href='/contact-us' className='nav-list--item'>Contact Us</Link>
                     </div>
