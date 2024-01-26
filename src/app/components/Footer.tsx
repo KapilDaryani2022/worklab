@@ -1,17 +1,27 @@
 'use client';
-import { FC, } from 'react';
+import { FC, useEffect, useState} from 'react';
 import Link from 'next/link';
-
+import { usePathname } from '../../../node_modules/next/navigation';
+import Image from 'next/image'
 // IMAGES
 import ChevronRight from '../../../public/chevron-rigjt.svg';
-import LogoSmall from '../../../public/logo-small.svg';
+import LogoSmall from '../../../public/logo-small.png';
 import Instagram from '../../../public/instagram.svg';
 import Facebook from '../../../public/facebook.svg';
 import Twitter from '../../../public/twitter.svg';
 
 const Footer: FC = () => {
+    const router = usePathname();
+    const [darkFooter, setDarkFooter] = useState(false)
+    useEffect(() => {
+        if (router === '/about-us') {
+            setDarkFooter(true)
+        } else {
+            setDarkFooter(false)
+        }
+    }, [router]);
     return (
-        <footer>
+        <footer className={darkFooter ? 'darkFooter' : ''}>
             <div className="container">
                <div className="get-in-touch">
                     <div className="get-in-touch-contact">
@@ -24,7 +34,7 @@ const Footer: FC = () => {
                </div>
                <div className="footer-bottom">
                    <div className="footer-bottom--social-links">
-                        <a href=""><LogoSmall /></a>
+                        <a href=""><Image src={LogoSmall} alt='logo-small' /></a>
                         <div>
                             <p className="lead">Contact</p>
                             <ul>
@@ -41,28 +51,40 @@ const Footer: FC = () => {
                    <div className="footer-bottom--links">
                         <div>
                             <p className="lead">Home</p>
+                            <ul>
+                                <li><Link href="/#services">Services</Link></li>
+                                <li><Link href="/#whyDubai">Why Dubai</Link></li>
+                                <li><Link href="/#ourValues">Our Values</Link></li>
+                                <li><Link href="/#whyUs">Why Us?</Link></li>
+                            </ul>
                         </div>
                         <div>
                             <p className="lead">services</p>
                             <ul>
-                                <li><Link href="/">Coats</Link></li>
-                                <li><Link href="/">Denim</Link></li>
-                                <li><Link href="/">Jackets</Link></li>
-                                <li><Link href="/">Polo shirts</Link></li>
-                                <li><Link href="/">Shirts</Link></li>
+                                <li><Link href="/">Business Setup</Link></li>
+                                <li><Link href="/">Ministry Approvals</Link></li>
+                                <li><Link href="/">Corporate Services </Link></li>
                             </ul>
                         </div>
                         <div>
                             <p className="lead">why dubai</p>
                             <ul>
-                                <li><Link href="/">New arrivals</Link></li>
+                                <li><Link href="/why-dubai">Growth</Link></li>
+                                <li><Link href="/why-dubai">Recognition</Link></li>
+                                <li><Link href="/why-dubai">Growth Figures</Link></li>
+                                <li><Link href="/why-dubai">GDP</Link></li>
+                                <li><Link href="/why-dubai">Partnerships</Link></li>
+                                <li><Link href="/why-dubai">Innovative Drive</Link></li>
                             </ul>
                         </div>
                         <div>
                             <p className="lead">about us</p>
                             <ul>
-                                <li><Link href="/">New arrivals</Link></li>
-                                <li><Link href="/">Top picks</Link></li>
+                                <li><Link href="/about-us">Why Worklab</Link></li>
+                                <li><Link href="/about-us">Mission</Link></li>
+                                <li><Link href="/about-us">Values</Link></li>
+                                <li><Link href="/about-us">Founders</Link></li>
+                                <li><Link href="/about-us">Join Us</Link></li>
                             </ul>
                         </div>
                         <p className="lead copyright">© 2023 — Copyright</p>

@@ -35,7 +35,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='provide-section'>
+      <section className='provide-section' id="services">
         <div className="container">
           <div className="provide-section--inner">
             <h2>Services we Provide</h2>
