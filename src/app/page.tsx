@@ -12,6 +12,7 @@ import Value3 from '../../public/value-3.webp';
 import Value4 from '../../public/value-4.webp';
 import WImage from '../../public/w.png';
 import Link from 'next/link';
+import 'animate.css';
 
 export default function Home() {
   const link = 'Learn More >'
@@ -27,7 +28,7 @@ export default function Home() {
           <span className='inner-circle'></span>
           <span className='small-circle'></span>
           <span className='big-circle'></span>
-          <h1>Swiftly Set Up Your Dream Business in UAE</h1>
+          <h1 className="animate__animated animate__bounce">Swiftly Set Up Your Dream Business in UAE</h1>
           <p>Experience a hassle-free journey to establish your business in the UAE with our expert guidance.</p>
           <div className="flex">
             <input placeholder='Your Business Name' type="text" name='businessName' />
@@ -100,7 +101,7 @@ export default function Home() {
       <section className='why-dubai'>
         <div className="container">
           <div className="why-dubai--content">
-            <h2>Why <br /> Dubaaaaaaaaaaai ?!</h2>
+            <h2 className="animate__animated animate__bounce">Why <br /> Dubaaaaaaaaaaai ?!</h2>
             <p>Where Innovation Meets Limitless Horizons.</p>
             <Link className='learn-more' href='/'>{link}</Link>
           </div>
@@ -159,7 +160,7 @@ export default function Home() {
       <section className="why-us">
         <div className="container">
           <div className='heading-section'>
-            <h2>Why Us?</h2>
+            <h2 className="animate__animated animate__bounce">Why Us?</h2>
             <p>Quality services unlike any service provides around here</p>
           </div>
           <div className="why-us--content">
