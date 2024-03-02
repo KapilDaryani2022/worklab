@@ -4,77 +4,86 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import DubaiGrowth from '../../../public/dubai-growth.webp';
 import WorldMap from '../../../public/word-map.svg';
-import * as Highcharts from 'highcharts';
+import Highcharts from 'highcharts';
+import HighchartsReact from 'highcharts-react-official';
 
 export default function WhyDubai() {
   const categories = ['China', 'India', "UAE's Non-Oil GDP", 'Jafza'];
   const formattedCategories = categories.map(category => '$' + category);
-  useEffect(() => {
-    Highcharts.chart('trade-partners--container', {
-        chart: {
-            type: 'bar'
+  const options = {
+      chart: {
+          type: 'bar'
+      },
+      title: {
+          text: '',
+          align: 'left'
+      },
+      xAxis: {
+        categories: categories,
+        title: {
+            text: null
         },
+        lineWidth: 0
+      },
+      tooltip: {
+        formatter: function(this: Highcharts.TooltipFormatterContextObject): string {
+          const yValue = typeof this.point.y !== 'undefined' ? this.point.y : 0; // Ensure yValue is defined
+          return '<b>' + categories[this.point.x] + '</b><br/>' +
+            '$' + Highcharts.numberFormat(yValue, 0, '.', ',') + 'B';
+        }
+      },
+      yAxis: {
+        gridLineWidth: 1,
+        min: 0,
+        tickInterval: 50,
+        max: 500,
         title: {
             text: '',
-            align: 'left'
+            align: ''
         },
-        xAxis: {
-          categories: categories,
-          title: {
-              text: null
-          },
-          lineWidth: 0
-        },
-        tooltip: {
-          formatter: function() {
-            return '<b>' + categories[this.point.x] + '</b><br/>' +
-            '$' + Highcharts.numberFormat(this.point.y, 0, '.', ',') + 'B';
-          }
-        },
-        yAxis: {
-          gridLineWidth: 1,
-          min: 0,
-          tickInterval: 50,
-          max: 500,
-          title: {
-              text: '',
-              align: ''
-          },
-          labels: {
-              formatter: function() {
-                  return '$' + Highcharts.numberFormat(this.value, 0, '.', ',') + 'B';
-              },
-              overflow: 'justify'
-          },
-      },
-        plotOptions: {
-            bar: {
-                color: '#D6DADF',
-                borderRadius: 50, 
-                border: 0,
-                dataLabels: {
-                    enabled: true
-                },
-                groupPadding: 0.1
+        labels: {
+          formatter: function(this: Highcharts.AxisLabelsFormatterContextObject): string {
+            let value = 0; // Default value to handle non-numeric cases
+            if (typeof this.value !== 'undefined') {
+              // Try parsing this.value as a number
+              const parsedValue = parseFloat(String(this.value));
+              if (!isNaN(parsedValue)) {
+                // If parsing succeeds, assign parsed value to 'value'
+                value = parsedValue;
+              }
             }
-        },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'top',
-            x: -40,
-            y: 80,
-            floating: true,
-            borderWidth: 1,
-        },
-        credits: {
-            enabled: false
-        },
-        series: [{
-          data: [40.8, 36.8, {y: 425, color: '#64D898'}, 93]
-      }]
-    });
-  }, []);
+            return '$' + Highcharts.numberFormat(value, 0, '.', ',') + 'B';
+          },
+          overflow: 'justify'
+        }        
+    },
+      plotOptions: {
+          bar: {
+              color: '#D6DADF',
+              borderRadius: 50, 
+              border: 0,
+              dataLabels: {
+                  enabled: true
+              },
+              groupPadding: 0.1
+          }
+      },
+      legend: {
+          layout: 'vertical',
+          align: 'right',
+          verticalAlign: 'top',
+          x: -40,
+          y: 80,
+          floating: true,
+          borderWidth: 1,
+      },
+      credits: {
+          enabled: false
+      },
+      series: [{
+        data: [40.8, 36.8, {y: 425, color: '#64D898'}, 93]
+    }]
+  }
 
   return (
     <main>
@@ -155,8 +164,8 @@ export default function WhyDubai() {
         <div className="container">
           <h2>Trade Partnerships</h2>
           <p className="small">Uncover the driving forces behind Dubai's growth as a trading powerhouse.</p>
-          <div className="trade-partners--container" style={{ height: '350px' }} id="trade-partners--container">
-            
+          <div style={{ height: '350px' }} id="trade-partners--container">
+            <HighchartsReact highcharts={Highcharts} options={options} />
           </div>
           <p className="small">China, contributing US$40.8 billion, takes the lead as the emirate's largest trading partner, closely followed by India with US$36.8 billion. Explore the significance of Jafza, the GCC's largest special economic zone, contributing 23.8% to the city's GDP.</p>
         </div>
