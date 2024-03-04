@@ -21,7 +21,7 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
 ## Learn More
-
+https://www.figma.com/file/9DctcwsAIuIt0YwSi0awG8/Worklab-Website---UI?type=design&node-id=0%3A1&mode=design&t=9QdxUoDLSozVpZMR-1
 To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.

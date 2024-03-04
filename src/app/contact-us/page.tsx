@@ -4,6 +4,7 @@ import ContactUsImage from '../../../public/contact-us-image.webp';
 import Location from '../../../public/location.svg';
 import Contact from '../../../public/contact.svg';
 import Social from '../../../public/social.svg';
+import Email from '../../../public/email.svg';
 
 
 export default function ContactUs() {
@@ -45,44 +46,58 @@ export default function ContactUs() {
         </div>
       </section>
       <section className='reach-out'>
-          <h2>Reach out to us</h2>
             <div className="container">
+                <h2>Reach out to us</h2>
+                <p>Send us a message and get in touch</p>
                 <div className="reach-out-inner">
                     <div>
                         <div>
-                            <div className="flex">
-                                <Location />
-                                <p>Address</p>
-                            </div>
-                            <p>Dmart Community Management,<br /> Ground Floor, Souq Al Manzil,<br /> Opp Al Abra, Dubai, UAE.</p>
-                        </div>
-                        <div>
-                            <div className="flex">
+                            <div className="reach-out-inner--icon">
                                 <Contact />
-                                <p>Contact</p>
+                            </div>
+                            <div className="flex">
+                                <p>Phone</p>
                             </div>
                             <a href="tel:+971505472769">+971 50 5472 769</a>
-                            <a href="mailto:zanan@worklab.ae">zanan@worklab.ae</a>
                         </div>
                         <div>
+                            <div className="reach-out-inner--icon">
+                                <Email />
+                            </div>
                             <div className="flex">
+                                <p>Email</p>
+                            </div>
+                            <a href="mailtozanan@worklab.ae">zanan@worklab.ae</a>
+                        </div>
+                        <div>
+                            <div className="reach-out-inner--icon">
                                 <Social />
+                            </div>
+                            <div className="flex">
                                 <p>Socials</p>
                             </div>
-                            <a href="/">Instagram</a>
-                            <a href="/">Facebook</a>
-                            <a href="/">LinkedIn</a>
+                            <a href="#">Instagram</a>
+                            <a href="#">Facebook</a>
+                            <a href="#">LinkedIn</a>
+                        </div>
+                        <div>
+                            <div className="reach-out-inner--icon">
+                                <Location />
+                            </div>
+                            <div className="flex">
+                                <p>Address</p>
+                            </div>
+                            <p>Office 08, Golden Gate Business Centre, 3rd Floor - Block C, Al Hudaiba Awards Building, Dubai.</p>
                         </div>
                     </div>
                     <div className='reach-out-iframe'>
-                        {/* <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.3311172515173!2d55.40118207415092!3d25.124494034643963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f63cac34a2433%3A0x512986a8b6946d2c!2sSilicon%20Oasis!5e0!3m2!1sen!2sin!4v1705261221522!5m2!1sen!2sin" width="600" height="451" style={{border:0}} allowfullscreen={true} loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> */}
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3612.3311172515173!2d55.40118207415092!3d25.124494034643963!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f63cac34a2433%3A0x512986a8b6946d2c!2sSilicon%20Oasis!5e0!3m2!1sen!2sin!4v1705261221522!5m2!1sen!2sin"
-                            width="600"
-                            height="451"
-                            style={{ border: 'your-border' }}
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.870319976136!2d55.26958587461267!3d25.24129242991473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43b432c0e305%3A0xae6fc6aff75fe1c6!2sGoldengate%20One%20Business%20Center!5e0!3m2!1sen!2sin!4v1709485426269!5m2!1sen!2sin" 
+                            width="530" 
+                            height="354" 
+                            style={{ border: '0' }}
                             allowFullScreen={true}
-                            loading="lazy"
+                            loading="lazy" 
                             referrerPolicy="no-referrer-when-downgrade"
                         />
                     </div>
