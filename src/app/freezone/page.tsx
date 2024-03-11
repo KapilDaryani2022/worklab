@@ -66,7 +66,7 @@ export default function FreeZone() {
   return (
     <main style={{backgroundColor: '#101210'}}>
       <section className='business-banner'>
-        <div className="container">
+        <div className="container animate__animated animate__fadeInUp">
             <p className='page-title'>Business Setup</p>
             <h1>Freezone Business</h1>
             <p className='des'>Free zones are economic areas where investors can trade goods and services with preferential tax and customs rates.</p>

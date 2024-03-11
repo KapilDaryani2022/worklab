@@ -28,7 +28,7 @@ export default function AboutUs() {
     <main style={{ backgroundColor: '#101210' }} className="about-page">
         <section className='about-banner'>
             <div className="container">
-                <div className='heading-section'>
+                <div className='heading-section animate__animated animate__fadeInUp'>
                     <h1>For the next generation <br /> of innovators.</h1>
                     <p>We are here to make a revolution for the next generation, here’s some more about us.</p>
                     <ScrollDownImage />

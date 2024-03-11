@@ -89,7 +89,7 @@ export default function WhyDubai() {
     <main>
       <section className='why-dubai-section'>
         <div className="container">
-            <div className='heading-section'>
+            <div className='heading-section animate__animated animate__fadeInUp'>
                 <h1>Why Dubai?</h1>
                 <p>Welcome to the heart of innovation, where Dubai's rapid and sustainable growth positions it as a global business and technology leader.</p>
             </div>

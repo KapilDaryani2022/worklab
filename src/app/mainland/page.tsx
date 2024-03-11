@@ -43,7 +43,7 @@ export default function MainLand() {
   return (
     <main style={{backgroundColor: '#101210'}}>
       <section className='business-banner'>
-        <div className="container">
+        <div className="container animate__animated animate__fadeInUp">
             <p className='page-title'>Business Setup</p>
             <h1>Mainland Business</h1>
             <p className='des'>This sector can benefit by having access to the local market as well as outside the UAE. Learn more on how to setup a Mainland Business in the UAE</p>

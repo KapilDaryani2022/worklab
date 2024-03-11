@@ -5,71 +5,54 @@ import EndIcon from '../../../../public/end-icon-2.svg';
 import BusinessService from '../../../../public/business-services.webp';
 import BusinessService2 from '../../../../public/business-services-2.webp';
 import BusinessService3 from '../../../../public/business-services-3.webp';
-import ChevronRight from '../../../../public/chevron-rigjt.svg';
-import Creative from '../../../../public/creative-grow.webp';
-import Community from '../../../../public/community.webp';
 
 
 export default function MainLand() {
     return (
         <main style={{ backgroundColor: '#101210' }}>
-            <section className='business-banner services grow'>
-                <div className="container animate__animated animate__fadeInUp">
+            <section className='business-banner services corporate animate__animated animate__fadeInUp'>
+                <div className="container">
                     <p className='page-title'>Services</p>
-                    <h1>Brand And Grow</h1>
-                    <p className='des'>Elevate your brand with our innovative strategies, bolstered by a vibrant freelance community ready to bring creative excellence.</p>
-                    <a href='#planningServices'>
+                    <h1>Corporate Services</h1>
+                    <p className='des'>Streamline your business operations with our tailored corporate services, ensuring compliance, efficiency, and peace of mind.</p>
+                    <a href='#corporateservices'>
                         <ScrollDownImage />
                     </a>
                 </div>
             </section>
-            <section className='planning-services' id='planningServices'>
+            <section className='planning-services' id='corporateservices'>
                 <div className="container">
                     <div className="common--container">
-                        <p className='page-title'>Brand and Grow Services</p>
-                        <h2>Elevate Your Presence with Our Powerful Services!</h2>
-                        <p>Empower your brand with creative strategies that resonate with your audience and drive growth.</p>
+                        <p className='page-title'>Corporate Services</p>
+                        <h2>Services to Streamline Your Corporate Business Operations</h2>
+                        <p>Enhance operational efficiency with our comprehensive corporate service solutions.</p>
                     </div>
-                    <div className="planning-services--container brand-grow">
+                    <div className="planning-services--container brand-corporate">
                         <div className='sixty-width white'>
                             <div>
-                                <h3>Naming</h3>
-                                <p>Craft a compelling name that captures the essence and values of your brand.</p>
+                                <h3>Hire a P.R.O</h3>
+                                <p>Leverage expert PRO services for efficient navigation of local business protocols and requirements.</p>
                             </div>
                         </div>
-                        <div className='foutry-width'>
+                        <div className='foutry-width white'>
                             <div>
-                                <h3>Portfolio </h3>
-                                <p>Curate your brand's essence with impactful brochures and presentations that captivate and convince</p>
+                                <h3>Ministry Approvals</h3>
+                                <p>Ensure swift and compliant ministry approvals to facilitate your business ventures in the UAE.</p>
                             </div>
                         </div>
-                        <div className='seventy-width white' style={{ alignItems: 'center' }}>
+                        <div className='seventy-width' style={{ alignItems: 'center' }}>
                             <div>
-                                <h3>Design Services</h3>
-                                <p>From logos to social media graphics, our design mastery covers all your branding needs with creativity and flair.</p>
+                                <h3>Visa Assistance</h3>
+                                <p>Obtain comprehensive visa support for your team, ensuring smooth entry and operation in the UAE.</p>
                             </div>
                         </div>
                         <div className='thirty-width'>
                             <div>
-                                <h3>Grow Your <br />Business Now!</h3>
-                                <p>Start your journey to brand prominence in the UAE market today.</p>
-                                <Link href='/contact-us' className='btn btn-primary'>Contact Us <ChevronRight /></Link>
+                                <h3>Documentation</h3>
+                                <p>Get meticulous documentation services to underpin your corporate setup and transactions.</p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section className='business-designation'>
-                <div className="container">
-                    <div className="business-designation--container">
-                        <p className='page-title'>Business Digitalization</p>
-                        <Image src={Creative} alt='Creative' />
-                        <div className="common--container">
-                            <h2>Digitalize Your Business</h2>
-                            <p>Want to take your offline business to  online and generate massive revenue? You’re in the right place!</p>
-                        </div>
-                    </div>
-                    <Image src={Community} alt='Community' />
                 </div>
             </section>
             <section className='planning-sectors'>
@@ -121,14 +104,14 @@ export default function MainLand() {
                         <p>Curate your brand's essence with impactful brochures and presentations that captivate and convince.</p>
                     </div>
                     <div className="planning-sectors-list">
+                        <Link href={'/services/brand-and-grow'} className='planning-sectors--item'>
+                            <h3>Brand And Grow</h3>
+                            <p>Elevate and expand your brand's reach.</p>
+                            <div><p>Visit Page</p><EndIcon /></div>
+                        </Link>
                         <Link href={'/services/business-planning'} className='planning-sectors--item business-planning'>
                             <h3>Business Planning</h3>
                             <p>Strategic insights to align your corporate structure with business goals.</p>
-                            <div><p>Visit Page</p><EndIcon /></div>
-                        </Link>
-                        <Link href={'/services/corporate-services'} className='planning-sectors--item'>
-                            <h3>Corporate Services</h3>
-                            <p>Streamline operations with comprehensive support.</p>
                             <div><p>Visit Page</p><EndIcon /></div>
                         </Link>
                         <Link href={'/services/brand-to-uae'} className='planning-sectors--item'>

@@ -10,7 +10,7 @@ import ChevronRight from '../../../../public/chevron-rigjt.svg';
 export default function MainLand() {
   return (
     <main style={{backgroundColor: '#101210'}}>
-      <section className='business-banner services'>
+      <section className='business-banner services animate__animated animate__fadeInUp'>
         <div className="container">
             <p className='page-title'>Services</p>
             <h1>Business Planning</h1>
@@ -70,7 +70,7 @@ export default function MainLand() {
                 <p>Custom sector strategies to position your business advantageously in the UAE.</p>
             </div>
             <div className="planning-sectors-list">
-                <Link href={'/'} className='planning-sectors--item'>
+                <Link href={'/mainland'} className='planning-sectors--item'>
                     <div className="planning-sectors--item--image">
                         <Image src={BusinessService} alt='BusinessService' />
                     </div>
@@ -80,7 +80,7 @@ export default function MainLand() {
                     </div>
                     <div><p>Learn More</p><EndIcon/></div>
                 </Link>
-                <Link href={'/'} className='planning-sectors--item'>
+                <Link href={'/offshore'} className='planning-sectors--item'>
                     <div className="planning-sectors--item--image">
                         <Image src={BusinessService2} alt='BusinessService' />
                     </div>
@@ -90,7 +90,7 @@ export default function MainLand() {
                     </div>
                     <div><p>Learn More</p><EndIcon/></div>
                 </Link>
-                <Link href={'/'} className='planning-sectors--item'>
+                <Link href={'/freezone'} className='planning-sectors--item'>
                     <div className="planning-sectors--item--image">
                         <Image src={BusinessService3} alt='BusinessService' />
                     </div>
@@ -111,17 +111,17 @@ export default function MainLand() {
                 <p>Here’s how your journey is going to be like while to setup a Mainland Business in the UAE</p>
             </div>
             <div className="planning-sectors-list">
-                <Link href={'/'} className='planning-sectors--item'>
+                <Link href={'/services/brand-and-grow'} className='planning-sectors--item'>
                     <h3>Brand And Grow</h3>
                     <p>Elevate and expand your brand's <br/>reach.</p>
                     <div><p>Visit Page</p><EndIcon/></div>
                 </Link>
-                <Link href={'/'} className='planning-sectors--item'>
+                <Link href={'/services/corporate-services'} className='planning-sectors--item'>
                     <h3>Corporate Services</h3>
                     <p>Streamline operations with comprehensive support.</p>
                     <div><p>Visit Page</p><EndIcon/></div>
                 </Link>
-                <Link href={'/'} className='planning-sectors--item'>
+                <Link href={'/services/brand-to-uae'} className='planning-sectors--item'>
                     <h3>Brand To UAE</h3>
                     <p>Launch your brand into the UAE's thriving market.</p>
                     <div><p>Visit Page</p><EndIcon/></div>

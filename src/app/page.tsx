@@ -1,4 +1,6 @@
+'use client';
 import Image from 'next/image'
+import { useEffect, useRef, useState} from 'react';
 import ChevronRight from '../../public/chevron-rigjt.svg';
 import Traingle from '../../public/triangle.svg';
 import Rocket from '../../public/rocket.svg';
@@ -12,10 +14,37 @@ import Value3 from '../../public/value-3.webp';
 import Value4 from '../../public/value-4.webp';
 import WImage from '../../public/w.png';
 import Link from 'next/link';
-import 'animate.css';
 
 export default function Home() {
   const link = 'Learn More >'
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [inView, setInView] = useState<boolean>(false);
+  const [sectionSeen, setSectionSeen] = useState<boolean>(false);
+  const [screenWidth, setScreenWidth] = useState<number>(0);
+  useEffect(() => {
+    const handleResize = () => {
+      setScreenWidth(window.innerWidth);
+    };
+    setScreenWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+  useEffect(() => {
+    const handleScroll = () => {
+        if (sectionRef.current) {
+            const { top, bottom } = sectionRef.current.getBoundingClientRect();
+            const sectionInView = top < window.innerHeight && bottom > 0;
+            if (sectionInView) {
+                setInView(true);
+                setSectionSeen(true);
+            }
+        }
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+  }, [sectionSeen]);
   return (
     <main>
       <section className='hero'>
@@ -28,15 +57,17 @@ export default function Home() {
           <span className='inner-circle'></span>
           <span className='small-circle'></span>
           <span className='big-circle'></span>
-          <h1 className="animate__animated animate__bounce">Swiftly Set Up Your Dream Business in UAE</h1>
-          <p>Experience a hassle-free journey to establish your business in the UAE with our expert guidance.</p>
-          <div className="flex">
-            <input placeholder='Your Business Name' type="text" name='businessName' />
-            <button className='btn-primary'>Start Your Business <ChevronRight /></button>
+          <div className='animate__animated animate__fadeInUp'>
+            <h1 className="">Swiftly Set Up Your Dream Business in UAE</h1>
+            <p className=''>Experience a hassle-free journey to establish your business in the UAE with our expert guidance.</p>
+            <div className="flex ">
+              <input placeholder='Your Business Name' type="text" name='businessName' />
+              <button className='btn-primary'>Start Your Business <ChevronRight /></button>
+            </div>
           </div>
         </div>
       </section>
-      <section className='provide-section' id="services">
+      <section className={`provide-section`} id="services">
         <div className="container">
           <div className="provide-section--inner">
             <h2>Services we Provide</h2>
@@ -98,10 +129,10 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className='why-dubai'>
+      <section className={`section why-dubai ${inView ?'inView' : ''}`} ref={sectionRef}>
         <div className="container">
           <div className="why-dubai--content">
-            <h2 className="animate__animated animate__bounce">Why <br /> Dubaaaaaaaaaaai ?!</h2>
+            <h2 className="">Why <br /> Dubaaaaaaaaaaai?!</h2>
             <p>Where Innovation Meets Limitless Horizons.</p>
             <Link className='learn-more' href='/'>{link}</Link>
           </div>

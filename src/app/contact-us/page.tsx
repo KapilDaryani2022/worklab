@@ -12,7 +12,7 @@ export default function ContactUs() {
     <main>
       <section className='contact-us'>
         <div className="container">
-            <div className="contact-us-inner">
+            <div className="contact-us-inner animate__animated animate__fadeInUp">
                 <div className='contact-us-form'>
                     <h2>Have a coffee with us</h2>
                     <p>Send us a message and get in touch</p>

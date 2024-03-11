@@ -14,7 +14,7 @@ const Footer: FC = () => {
     const router = usePathname();
     const [darkFooter, setDarkFooter] = useState(false)
     useEffect(() => {
-        if (router === '/about-us' || router === '/mainland') {
+        if (router === '/about-us' || router === '/mainland' || router === '/offshore' || router === '/freezone' || router.includes('services')) {
             setDarkFooter(true)
         } else {
             setDarkFooter(false)

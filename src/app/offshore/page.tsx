@@ -37,7 +37,7 @@ export default function Offshore() {
   return (
     <main style={{backgroundColor: '#101210'}}>
       <section className='business-banner'>
-        <div className="container">
+        <div className="container animate__animated animate__fadeInUp">
             <p className='page-title'>Business Setup</p>
             <h1>Offshore Business</h1>
             <p className='des'>Offshore Business sector of companies allow foreign investors to own and operate a business in the UAE without having a physical presence in the country</p>

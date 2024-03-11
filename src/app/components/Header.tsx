@@ -1,9 +1,7 @@
 'use client';
-import { FC, useState, useEffect } from 'react';
+import { FC, useEffect, useState } from 'react';
+import { usePathname } from '../../../node_modules/next/navigation';
 import Link from 'next/link';
-
-// CSS
-// import '../styles/header.css'
 // IMAGES
 import Logo from '../../../public/logo.svg'
 import EndIcon from '../../../public/end-icon.svg'
@@ -17,18 +15,33 @@ import HeaderIcon7 from '../../../public/header-7.svg'
 
 
 const Header: FC = () => {
+    const router = usePathname();
+    useEffect(() => {
+        if (router === '/about-us' || router === '/mainland' || router === '/offshore' || router === '/freezone' || router.includes('services')) {
+            document.body.classList.add("dark-theme");
+        } else {
+            document.body.classList.remove("dark-theme");
+        }
+        setActive(false)
+    }, [router]);
+    const [active, setActive] = useState(false);
     return (
-        <header>
+        <header className='animate__animated animate__fadeIn'>
             <div className="container">
                 <div className="flex">
                     <Link href='/' className='logo'>
                         <Logo />
                     </Link>
-                    <div className="nav-list">
+                    <div className={!active ? 'burger' : 'burger is-active'} id="burger" onClick={() => {setActive(!active)}}>
+                        <span className="burger-line"></span>
+                        <span className="burger-line"></span>
+                        <span className="burger-line"></span>
+                    </div>
+                    <div className={active ? "nav-list active" : 'nav-list'}>
                         <div className="services">
-                            <Link href='/' className='nav-list--item services'>
+                            <p className='nav-list--item services'>
                                 Business Setup <EndIcon />
-                            </Link>
+                            </p>
                             <div className="services-div">
                                 <div className="services-div--inner">
                                     <div className="services-div--list">
@@ -64,9 +77,9 @@ const Header: FC = () => {
                             </div>
                         </div>
                         <div className="services">
-                            <Link href='/' className='nav-list--item services'>
+                            <p className='nav-list--item services'>
                                 Services <EndIcon />
-                            </Link>
+                            </p>
                             <div className="services-div">
                                 <div className="services-div--inner">
                                     <div className="services-div--list">
@@ -88,7 +101,7 @@ const Header: FC = () => {
                                                 <p>Your Corporate Journey, Elevated.</p>
                                             </div>
                                         </Link>
-                                        <Link href={'/'}>
+                                        <Link href={'/services/corporate-services'}>
                                             <div>
                                                 <HeaderIcon3 />
                                             </div>
@@ -97,7 +110,7 @@ const Header: FC = () => {
                                                 <p>Your Corporate Journey, Elevated.</p>
                                             </div>
                                         </Link>
-                                        <Link href={'/'}>
+                                        <Link href={'/services/brand-to-uae'}>
                                             <div>
                                                 <HeaderIcon4 />
                                             </div>
