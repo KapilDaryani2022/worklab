@@ -92,7 +92,7 @@ export default function ContactUs() {
                     </div>
                     <div className='reach-out-iframe'>
                         <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.870319976136!2d55.26958587461267!3d25.24129242991473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f43b432c0e305%3A0xae6fc6aff75fe1c6!2sGoldengate%20One%20Business%20Center!5e0!3m2!1sen!2sin!4v1709485426269!5m2!1sen!2sin" 
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1804.4386168851754!2d55.2710574!3d25.2410596!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa2549d59ba4bf041%3A0x792fca74a4013310!2sWorkLab%20Setup%20%26%20Marketing%20Co.!5e0!3m2!1sen!2sin!4v1710592305407!5m2!1sen!2sin" 
                             width="530" 
                             height="354" 
                             style={{ border: '0' }}

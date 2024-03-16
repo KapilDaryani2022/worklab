@@ -31,7 +31,7 @@ export default function AboutUs() {
                 <div className='heading-section animate__animated animate__fadeInUp'>
                     <h1>For the next generation <br /> of innovators.</h1>
                     <p>We are here to make a revolution for the next generation, here’s some more about us.</p>
-                    <ScrollDownImage />
+                    <a href="#whyWeBuild"><ScrollDownImage /></a>
                 </div>
             </div>
         </section>
@@ -39,7 +39,7 @@ export default function AboutUs() {
             <div className="shape"></div>
             <h2>MAP THE HOPE</h2>
         </section>
-        <section className='why-we-build'>
+        <section className='why-we-build' id='whyWeBuild'>
             <div className="container">
                 <div className="flex">
                     <div>
@@ -54,7 +54,7 @@ export default function AboutUs() {
                 </div>
             </div>
         </section>
-        <section className='our-mission'>
+        <section className='our-mission' id='ourMission'>
             <div className="container">
                 <div className="heading-section">
                     <h2>Our mission</h2>
@@ -163,12 +163,12 @@ export default function AboutUs() {
                 </div>
             </div>
         </section>
-        <section className="join-our-comunity">
+        <section className="join-our-comunity" id='joinUs'>
             <Image src={CommunityBg} className='join-our-comunity--rings' alt='/' />
             <div className="container">
                 <div className="heading-section">
                     <h2>Join Our Community</h2>
-                    <p>Be the Pioneer, Join the Movement. Connect, Collaborate, and Thrive. Reach out to us and secure your spot on the Early Waitlist – where opportunities unfold and connections flourish</p>
+                    <p>Be the Pioneer, Join the Movement. Connect, Collaborate, and Thrive. Reach out to us and secure your spot on the Early Waitlist</p>
                 </div>
                 <form className='flex'>
                     <input type="email" name='communtiyMail' placeholder='Email ID' />

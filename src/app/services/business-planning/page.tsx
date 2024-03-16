@@ -65,9 +65,9 @@ export default function MainLand() {
       <section className='planning-sectors'>
         <div className="container">
             <div className="common--container">
-                <p className='page-title'>Planning Services</p>
-                <h2>Planning for Sectors</h2>
-                <p>Custom sector strategies to position your business advantageously in the UAE.</p>
+                <p className='page-title'>Sectors</p>
+                <h2>Business Planning <br/>for Sectors</h2>
+                <p>Specialized corporate services tailored for Mainland, Offshore, and FreeZone sector intricacies.</p>
             </div>
             <div className="planning-sectors-list">
                 <Link href={'/mainland'} className='planning-sectors--item'>
@@ -108,7 +108,7 @@ export default function MainLand() {
             <div className="common--container">
                 <p className='page-title'>Related Services</p>
                 <h2>Related Services</h2>
-                <p>Here’s how your journey is going to be like while to setup a Mainland Business in the UAE</p>
+                <p>Explore complementary services tailored for effective business planning strategies.</p>
             </div>
             <div className="planning-sectors-list">
                 <Link href={'/services/brand-and-grow'} className='planning-sectors--item'>

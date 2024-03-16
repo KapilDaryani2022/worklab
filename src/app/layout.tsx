@@ -3,6 +3,7 @@ import Header from './components/Header'
 import './globals.css'
 import 'animate.css';
 import Footer from './components/Footer'
+import PopupCustom from './components/PopupCustom';
 
 export const metadata: Metadata = {
   title: 'Worklab',
@@ -19,6 +20,7 @@ export default function RootLayout({
       <body>
         <Header/>
         {children}
+        <PopupCustom />
         <Footer />
       </body>
     </html>

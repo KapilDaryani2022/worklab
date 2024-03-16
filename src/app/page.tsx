@@ -33,7 +33,7 @@ export default function Home() {
     const handleScroll = () => {
         if (sectionRef.current) {
             const { top, bottom } = sectionRef.current.getBoundingClientRect();
-            const sectionInView = top < window.innerHeight && bottom > 0;
+            const sectionInView = top < 0 && bottom > 0;
             if (sectionInView) {
                 setInView(true);
                 setSectionSeen(true);
@@ -45,6 +45,7 @@ export default function Home() {
         window.removeEventListener('scroll', handleScroll);
     };
   }, [sectionSeen]);
+  
   return (
     <main>
       <section className='hero'>
@@ -72,7 +73,7 @@ export default function Home() {
           <div className="provide-section--inner">
             <h2>Services we Provide</h2>
             <p>We give services that you require and is best for you! </p>
-            <Link className='learn-more' href='/'>{link}</Link>
+            <Link className='learn-more' href='/mainland'>{link}</Link>
           </div>
           <div className="services-provide--list">
             <div className="services-provide--list--item">
@@ -134,7 +135,7 @@ export default function Home() {
           <div className="why-dubai--content">
             <h2 className="">Why <br /> Dubaaaaaaaaaaai?!</h2>
             <p>Where Innovation Meets Limitless Horizons.</p>
-            <Link className='learn-more' href='/'>{link}</Link>
+            <Link className='learn-more' href='/why-dubai'>{link}</Link>
           </div>
         </div>
         <div className="moon"></div>

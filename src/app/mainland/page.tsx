@@ -184,17 +184,17 @@ export default function MainLand() {
               <div className="business-services--list--item">
                 <h3>Establish Identity</h3>
                 <p>Craft your business's unique brand and legal persona.</p>
-                <Link href={'/'}>Learn More <Arrowlink /></Link>
+                <Link href={'/services//business-planning'}>Learn More <Arrowlink /></Link>
               </div>
               <div className="business-services--list--item">
                 <h3>Expansion Strategy</h3>
                 <p>Strategize for growth and scale within the UAE's dynamic markets.</p>
-                <Link href={'/'}>Learn More <Arrowlink /></Link>
+                <Link href={'/services/brand-and-grow'}>Learn More <Arrowlink /></Link>
               </div>
               <div className="business-services--list--item">
                 <h3>Hire A PRO</h3>
                 <p>Secure expert Public Relations Officers for seamless documentation and liaison.</p>
-                <Link href={'/'}>Learn More <Arrowlink /></Link>
+                <Link href={'/services/corporate-services'}>Learn More <Arrowlink /></Link>
               </div>
             </div>
         </div>

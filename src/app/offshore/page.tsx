@@ -227,17 +227,17 @@ export default function Offshore() {
               <div className="business-services--list--item">
                 <h3>Visa Assistance</h3>
                 <p>Effortless visa processing to facilitate your offshore setup.</p>
-                <Link href={'/'}>Learn More <Arrowlink /></Link>
+                <Link href={'/services//business-planning'}>Learn More <Arrowlink /></Link>
               </div>
               <div className="business-services--list--item">
                 <h3>Documentation</h3>
                 <p>Complete your offshore documentation with precision and expertise</p>
-                <Link href={'/'}>Learn More <Arrowlink /></Link>
+                <Link href={'/services/brand-and-grow'}>Learn More <Arrowlink /></Link>
               </div>
               <div className="business-services--list--item">
                 <h3>Portfolio Creation</h3>
                 <p>Assemble a strong business portfolio tailored for offshore success.</p>
-                <Link href={'/'}>Learn More <Arrowlink /></Link>
+                <Link href={'/services/corporate-services'}>Learn More <Arrowlink /></Link>
               </div>
             </div>
         </div>

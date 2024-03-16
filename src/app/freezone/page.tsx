@@ -273,17 +273,17 @@ export default function FreeZone() {
               <div className="business-services--list--item">
                 <h3>Identity Creation</h3>
                 <p>Define your FreeZone entity with a distinct corporate identity</p>
-                <Link href={'/'}>Learn More <Arrowlink /></Link>
+                <Link href={'/services//business-planning'}>Learn More <Arrowlink /></Link>
               </div>
               <div className="business-services--list--item">
                 <h3>Portfolio Creation</h3>
                 <p>Build a compelling business portfolio to attract FreeZone opportunities.</p>
-                <Link href={'/'}>Learn More <Arrowlink /></Link>
+                <Link href={'/services/brand-and-grow'}>Learn More <Arrowlink /></Link>
               </div>
               <div className="business-services--list--item">
                 <h3>Ministry Approvals</h3>
                 <p>Navigate Freezone regulations with guaranteed ministry endorsements.</p>
-                <Link href={'/'}>Learn More <Arrowlink /></Link>
+                <Link href={'/services/corporate-services'}>Learn More <Arrowlink /></Link>
               </div>
             </div>
         </div>

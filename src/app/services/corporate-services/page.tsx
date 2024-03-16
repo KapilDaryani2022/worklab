@@ -58,9 +58,9 @@ export default function MainLand() {
             <section className='planning-sectors'>
                 <div className="container">
                     <div className="common--container">
-                        <p className='page-title'>Brand And Grow for Sectors</p>
-                        <h2>Grow Your Sector</h2>
-                        <p>Tailor your brand's growth strategies to thrive in Mainland, Offshore, and FreeZone sectors.</p>
+                        <p className='page-title'>Sectors</p>
+                        <h2>Corporate Service <br/>for Sectors</h2>
+                        <p>Specialized corporate services tailored for Mainland, Offshore, and FreeZone sector intricacies.</p>
                     </div>
                     <div className="planning-sectors-list">
                         <Link href={'/mainland'} className='planning-sectors--item'>
@@ -101,7 +101,7 @@ export default function MainLand() {
                     <div className="common--container">
                         <p className='page-title'>Related Services</p>
                         <h2>Related Services</h2>
-                        <p>Curate your brand's essence with impactful brochures and presentations that captivate and convince.</p>
+                        <p>Explore complementary services tailored for effective business planning strategies.</p>
                     </div>
                     <div className="planning-sectors-list">
                         <Link href={'/services/brand-and-grow'} className='planning-sectors--item'>

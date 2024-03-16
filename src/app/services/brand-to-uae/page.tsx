@@ -74,7 +74,7 @@ export default function MainLand() {
                     <div className="common--container">
                         <p className='page-title'>Related Services</p>
                         <h2>Related Services</h2>
-                        <p>Discover additional services to complement your brand's journey to success in the UAE</p>
+                        <p>Explore complementary services tailored for effective business planning strategies.</p>
                     </div>
                     <div className="planning-sectors-list">
                         <Link href={'/services/brand-and-grow'} className='planning-sectors--item'>
