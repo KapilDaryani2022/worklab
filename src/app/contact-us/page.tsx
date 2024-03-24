@@ -25,8 +25,8 @@ export default function ContactUs() {
         }));
     };
     const handleSubmit = (e: any) => {
-        e.preventDefault();
-        console.log(formData);
+        // e.preventDefault();
+        // console.log(formData);
     };
     const handleClear = () => {
         setFormData({
