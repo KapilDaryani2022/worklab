@@ -352,6 +352,7 @@ header a:hover, header .services > p:hover {
   line-height: 150%;
   margin-bottom: 10px;
   text-align: left;
+  font-size: 16px;
 }
 .worklab-icon .cross {
   position: absolute;
@@ -1806,7 +1807,7 @@ body::-webkit-scrollbar-thumb {
   background-image: url('../../public/e-commerce-3.png');
 }
 .e-Commerce--item:first-child:hover h3 {
-  margin-bottom: 95px;
+  margin-bottom: 135px;
 }
 .e-Commerce--item:hover h3 {
   margin-bottom: 130px;
