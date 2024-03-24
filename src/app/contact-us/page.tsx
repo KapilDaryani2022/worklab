@@ -58,7 +58,7 @@ export default function ContactUs() {
                     <h2>Have a coffee with us</h2>
                     <p>Send us a message and get in touch</p>
                     <form onSubmit={handleSubmit} action="https://api.web3forms.com/submit" method="POST">
-                        <input readOnly type="hidden" name="access_key" value="24e45b19-122e-493d-95d8-7f38351c44a3" />
+                        <input readOnly type="hidden" name="access_key" value="fe62baa7-63dd-4289-8181-bfd2fca59364" />
                         <div>
                             <label htmlFor="name">Name</label>
                             <input
