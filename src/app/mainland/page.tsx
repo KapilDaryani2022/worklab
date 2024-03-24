@@ -4,6 +4,8 @@ import ScrollDownImage from '../../../public/scroll-down.svg';
 import Dots from '../../../public/dots.png';
 import Arrowlink from '../../../public/arroe-link.svg';
 import BusinessImg from '../../../public/buiness-img.svg';
+import BusinessImg2 from '../../../public/buiness-img-2.svg';
+import BusinessImg3 from '../../../public/buiness-img-3.svg';
 import Globe from '../../../public/globe.svg';
 import Certified from '../../../public/certified.svg';
 import Shop from '../../../public/shop.svg';
@@ -14,12 +16,12 @@ import FAQ from '../components/Faq';
 export default function MainLand() {
   const faqData = [
     {
-      title: 'Is it easy to set up a business in UAE?',
-      des: 'UAE? UAE encourages entrepreneurs in all ways possible for the ease of the businessperson. Simultaneously, business consultants can make the tedious procedures also hassle-free.'
+      title: 'Is it possible to start a without having an office space?',
+      des: 'Yes'
     },
     {
       title: 'What is the fee to set up a business in UAE?',
-      des: 'The cost may vary on different factors like location, the scale of the business, activity etc. Though, you can start a business with a minimum of AED 18000.'
+      des: 'The cost may vary on different factors like location, the scale of the business, activity etc.'
     },
     {
       title: 'What are the licenses available in UAE mainland?',
@@ -37,7 +39,7 @@ export default function MainLand() {
     },
     {
       title: 'How long it takes to open a business in UAE?',
-      des: 'If you reach a skilled business consultant, the procedure must be completed in 4 to 5 business days.'
+      des: 'Depending on the activity, normal companies can be issues within 5 minutes.'
     }
   ]
   return (
@@ -109,7 +111,9 @@ export default function MainLand() {
               </div>
               <div className="business-steps--item--image">
                 <Image src={Dots} alt='Dots' className='dots-iamge'  />
-                <BusinessImg />
+                <div className='custom-svg'>
+                  <BusinessImg3 />
+                </div>
               </div>
             </div>
             <div className="business-steps--item">
@@ -138,7 +142,7 @@ export default function MainLand() {
               </div>
               <div className="business-steps--item--image">
                 <Image src={Dots} alt='Dots' className='dots-iamge'  />
-                <BusinessImg />
+                <BusinessImg2 />
               </div>
             </div>
             <div className="business-steps--item">

@@ -131,7 +131,7 @@ export default function AboutUs() {
                 </div>
             </div>
         </section>
-        <section className="our-founders">
+        {/* <section className="our-founders">
             <div className="container">
                 <div className="heading-section">
                     <h2>Our Founders</h2>
@@ -162,7 +162,7 @@ export default function AboutUs() {
                     </div>
                 </div>
             </div>
-        </section>
+        </section> */}
         <section className="join-our-comunity" id='joinUs'>
             <Image src={CommunityBg} className='join-our-comunity--rings' alt='/' />
             <div className="container">

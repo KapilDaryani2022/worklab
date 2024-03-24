@@ -14,12 +14,14 @@ const PopupCustom: FC = () => {
     const [darkFooter, setDarkFooter] = useState(false)
     useEffect(() => {
         const handleScroll = () => {
-        const scrollPosition = window.scrollY;
-        if (scrollPosition > 800 && showPopupAlways) {
-            setShowPopup(true);
-        } else {
-            setShowPopup(false);
-        }
+            const footer = document.querySelector('footer');
+            const footerPosition = footer?.getBoundingClientRect().top;
+            const scrollPosition = window.scrollY;
+            if (scrollPosition > 800 && showPopupAlways && footerPosition && footerPosition > 900) {
+                setShowPopup(true);
+            } else {
+                setShowPopup(false);
+            }
         };
         window.addEventListener('scroll', handleScroll);
         return () => {

@@ -1,15 +1,19 @@
 import Image from 'next/image'
 import Link from 'next/link';
+import FAQ from '../components/Faq';
 import ScrollDownImage from '../../../public/scroll-down.svg';
 import Dots from '../../../public/dots.png';
 import Arrowlink from '../../../public/arroe-link.svg';
-import BusinessImg from '../../../public/buiness-img.svg';
+import BusinessImg1 from '../../../public/buiness-img-4.svg';
+import BusinessImg2 from '../../../public/buiness-img-5.svg';
+import BusinessImg3 from '../../../public/buiness-img-6.svg';
+import BusinessImg4 from '../../../public/buiness-img-7.svg';
+import BusinessImg5 from '../../../public/buiness-img-8.svg';
 import Dollar from '../../../public/dollor.svg';
 import Certified from '../../../public/certified.svg';
 import Building from '../../../public/building.svg';
 import ArrowStep from '../../../public/arrow-step-down.svg';
 import RightIcon from '../../../public/right-icon.svg';
-import FAQ from '../components/Faq';
 
 export default function FreeZone() {
   const faqData = [
@@ -128,7 +132,7 @@ export default function FreeZone() {
               </div>
               <div className="business-steps--item--image">
                 <Image src={Dots} alt='Dots' className='dots-iamge'  />
-                <BusinessImg />
+                <BusinessImg1 />
               </div>
             </div>
             <div className="business-steps--item">
@@ -157,7 +161,7 @@ export default function FreeZone() {
               </div>
               <div className="business-steps--item--image">
                 <Image src={Dots} alt='Dots' className='dots-iamge'  />
-                <BusinessImg />
+                <BusinessImg2 />
               </div>
             </div>
             <div className="business-steps--item">
@@ -190,7 +194,7 @@ export default function FreeZone() {
               </div>
               <div className="business-steps--item--image">
                 <Image src={Dots} alt='Dots' className='dots-iamge'  />
-                <BusinessImg />
+                <BusinessImg3 />
               </div>
             </div>
             <div className="business-steps--item">
@@ -223,7 +227,7 @@ export default function FreeZone() {
               </div>
               <div className="business-steps--item--image">
                 <Image src={Dots} alt='Dots' className='dots-iamge'  />
-                <BusinessImg />
+                <BusinessImg4 />
               </div>
             </div>
             <div className="business-steps--item">
@@ -256,7 +260,7 @@ export default function FreeZone() {
               </div>
               <div className="business-steps--item--image">
                 <Image src={Dots} alt='Dots' className='dots-iamge'  />
-                <BusinessImg />
+                <BusinessImg5 />
               </div>
             </div>
           </div>

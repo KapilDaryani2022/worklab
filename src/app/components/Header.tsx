@@ -2,6 +2,7 @@
 import { FC, useEffect, useState } from 'react';
 import { usePathname } from '../../../node_modules/next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 // IMAGES
 import Logo from '../../../public/logo.svg'
 import EndIcon from '../../../public/end-icon.svg'
@@ -13,6 +14,7 @@ import HeaderIcon5 from '../../../public/header-5.svg'
 import HeaderIcon6 from '../../../public/header-6.svg'
 import HeaderIcon7 from '../../../public/header-7.svg'
 import ArrowLinkSvg from '../../../public/arrow-link.svg'
+import Loading from '../../../public/loading.gif'
 
 
 const Header: FC = () => {
@@ -26,6 +28,11 @@ const Header: FC = () => {
         setActive(false)
     }, [router]);
     const [active, setActive] = useState(false);
+    useEffect(() => {
+        if (active) {
+            document.body.classList.add('openNav');
+        }
+    }, [active]);
     return (
         <header className='animate__animated animate__fadeIn'>
             <div className="container">
@@ -133,11 +140,7 @@ const Header: FC = () => {
                             <div className="services-div community">
                                 <ArrowLinkSvg />
                                 Coming Soon
-                                <div className="button-loader">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
+                                <Image src={Loading} alt="loading" />
                             </div>
                         </div>
                     </div>

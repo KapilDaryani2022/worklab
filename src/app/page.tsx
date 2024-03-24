@@ -1,5 +1,6 @@
 'use client';
 import Image from 'next/image'
+import { useRouter } from "next/navigation";
 import { useEffect, useRef, useState} from 'react';
 import ChevronRight from '../../public/chevron-rigjt.svg';
 import Traingle from '../../public/triangle.svg';
@@ -45,7 +46,12 @@ export default function Home() {
         window.removeEventListener('scroll', handleScroll);
     };
   }, [sectionSeen]);
-  
+  const router = useRouter();
+  const [bName, setBName] = useState('')
+  const handleContact = () => {
+    localStorage.setItem('business-name', JSON.stringify(bName));
+    router.push('/contact-us');
+  }
   return (
     <main>
       <section className='hero'>
@@ -62,8 +68,8 @@ export default function Home() {
             <h1 className="">Swiftly Set Up Your Dream Business in UAE</h1>
             <p className=''>Experience a hassle-free journey to establish your business in the UAE with our expert guidance.</p>
             <div className="flex ">
-              <input placeholder='Your Business Name' type="text" name='businessName' />
-              <button className='btn-primary'>Start Your Business <ChevronRight /></button>
+              <input placeholder='Your Business Name' value={bName} type="text" name='businessName' onChange={(e) => {setBName(e.target.value)}} />
+              <button onClick={handleContact} className='btn-primary'>Start Your Business <ChevronRight /></button>
             </div>
           </div>
         </div>
@@ -133,7 +139,7 @@ export default function Home() {
       <section className={`section why-dubai ${inView ?'inView' : ''}`} ref={sectionRef}>
         <div className="container">
           <div className="why-dubai--content">
-            <h2 className="">Why <br /> Dubaaaaaaaaaaai?!</h2>
+            <h2 className="">Why Dubai ?!</h2>
             <p>Where Innovation Meets Limitless Horizons.</p>
             <Link className='learn-more' href='/why-dubai'>{link}</Link>
           </div>

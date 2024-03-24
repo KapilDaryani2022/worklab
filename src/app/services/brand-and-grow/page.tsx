@@ -8,6 +8,12 @@ import BusinessService3 from '../../../../public/business-services-3.webp';
 import ChevronRight from '../../../../public/chevron-rigjt.svg';
 import Creative from '../../../../public/creative-grow.webp';
 import Community from '../../../../public/community.webp';
+import FirstImage from '../../../../public/first.png';
+import Second from '../../../../public/second.png';
+import Third from '../../../../public/third.png';
+import Fourth from '../../../../public/fourth.png';
+import Fifth from '../../../../public/fifth.png';
+
 
 
 export default function MainLand() {
@@ -69,7 +75,29 @@ export default function MainLand() {
                             <p>Want to take your offline business to  online and generate massive revenue? You’re in the right place!</p>
                         </div>
                     </div>
-                    <Image src={Community} alt='Community' />
+                    <div className="grid-buisness">
+                        <div className="grid-buisness--row">
+                            <div className="grid-buisness--row--item">
+                                <Image  src={FirstImage} alt='image' />
+                            </div>
+                            <div className="grid-buisness--row--item">
+                                <Image src={Second} alt='image' />
+                            </div>
+                        </div>
+                        <div className="grid-buisness--row">
+                            <div className="grid-buisness--row--item">
+                            <Image src={Third} alt='image' />
+                            </div>
+                        </div>
+                        <div className="grid-buisness--row">
+                            <div className="grid-buisness--row--item">
+                            <Image src={Fourth} alt='image' />
+                            </div>
+                            <div className="grid-buisness--row--item">
+                            <Image src={Fifth} alt='image' />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <section className='planning-sectors'>
@@ -118,7 +146,7 @@ export default function MainLand() {
                     <div className="common--container">
                         <p className='page-title'>Related Services</p>
                         <h2>Related Services</h2>
-                        <p>Explore complementary services tailored for effective business planning strategies.</p>
+                        <p>Explore our suite of professional services complementing your corporate needs.</p>
                     </div>
                     <div className="planning-sectors-list">
                         <Link href={'/services/business-planning'} className='planning-sectors--item business-planning'>

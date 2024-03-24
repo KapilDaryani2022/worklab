@@ -1,5 +1,7 @@
+'use client';
 import Image from 'next/image'
 import Link from 'next/link';
+import {useState, useEffect} from 'react';
 import ContactUsImage from '../../../public/contact-us-image.webp';
 import Location from '../../../public/location.svg';
 import Contact from '../../../public/contact.svg';
@@ -8,6 +10,45 @@ import Email from '../../../public/email.svg';
 
 
 export default function ContactUs() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        businessName: '',
+        message: ''
+    });
+    const handleChange = (e: any) => {
+        const { name, value } = e.target;
+        setFormData(prevState => ({
+          ...prevState,
+          [name]: value
+        }));
+    };
+    const handleSubmit = (e: any) => {
+        e.preventDefault();
+        console.log(formData);
+    };
+    const handleClear = () => {
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          businessName: '',
+          message: ''
+        });
+    };
+    useEffect(() => {
+        const storedItemString = localStorage.getItem('business-name');
+        if (storedItemString) {
+            const storedItem = JSON.parse(storedItemString);
+            setFormData(prevState => ({
+                ...prevState,
+                'businessName': storedItem
+            }));
+        } else {
+            console.log('Item not found in localStorage');
+        }
+    }, []);
   return (
     <main>
       <section className='contact-us'>
@@ -16,26 +57,65 @@ export default function ContactUs() {
                 <div className='contact-us-form'>
                     <h2>Have a coffee with us</h2>
                     <p>Send us a message and get in touch</p>
-                    <form>
+                    <form onSubmit={handleSubmit}>
                         <div>
                             <label htmlFor="name">Name</label>
-                            <input type="text" name='name' placeholder='Enter Full Name' />
+                            <input
+                            required
+                            type="text"
+                            name='name'
+                            placeholder='Enter Full Name'
+                            value={formData.name}
+                            onChange={handleChange}
+                            />
                         </div>
                         <div>
                             <label htmlFor="email">Email ID</label>
-                            <input type="email" name='email' placeholder='Enter Email' />
+                            <input
+                            required
+                            type="email"
+                            name='email'
+                            placeholder='Enter Email'
+                            value={formData.email}
+                            onChange={handleChange}
+                            />
                         </div>
                         <div>
                             <label htmlFor="phone">Phone No.</label>
-                            <input type="tel" name='phone' placeholder='Enter Phone No.' />
+                            <input
+                            required
+                            type="tel"
+                            name='phone'
+                            placeholder='Enter Phone No'
+                            value={formData.phone}
+                            onChange={handleChange}
+                            />
+                        </div>
+                        <div>
+                            <label htmlFor="businessName">Business Name</label>
+                            <input
+                            required
+                            type="text"
+                            name='businessName'
+                            placeholder='Enter Business Name'
+                            value={formData.businessName}
+                            onChange={handleChange}
+                            />
                         </div>
                         <div>
                             <label htmlFor="message">Message</label>
-                            <textarea name="message" placeholder='Enter your message' cols={30} rows={5}></textarea>
+                            <textarea
+                            name="message"
+                            placeholder='Enter your message'
+                            cols={30}
+                            rows={3}
+                            value={formData.message}
+                            onChange={handleChange}
+                            ></textarea>
                         </div>
                         <div className='contact-btns'>
-                            <button>Clear Fields</button>
-                            <button className='btn-primary'>Send Message</button>
+                            <button onClick={handleClear}>Clear Fields</button>
+                            <button type='submit' className='btn-primary'>Send Message</button>
                         </div>
                     </form>
                 </div>
@@ -76,9 +156,9 @@ export default function ContactUs() {
                             <div className="flex">
                                 <p>Socials</p>
                             </div>
-                            <a href="#">Instagram</a>
-                            <a href="#">Facebook</a>
-                            <a href="#">LinkedIn</a>
+                            <a href="https://www.instagram.com/worklab.ae/" target='_blank'>Instagram</a>
+                            <a href="https://www.facebook.com/WorkLabMedia/" target='_blank'>Facebook</a>
+                            <a href="https://www.linkedin.com/company/worklabmedia" target='_blank'>LinkedIn</a>
                         </div>
                         <div>
                             <div className="reach-out-inner--icon">

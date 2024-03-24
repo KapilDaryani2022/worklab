@@ -3,7 +3,10 @@ import Link from 'next/link';
 import ScrollDownImage from '../../../public/scroll-down.svg';
 import Dots from '../../../public/dots.png';
 import Arrowlink from '../../../public/arroe-link.svg';
-import BusinessImg from '../../../public/buiness-img.svg';
+import BusinessImg1 from '../../../public/buiness-img-9.svg';
+import BusinessImg2 from '../../../public/buiness-img-10.svg';
+import BusinessImg3 from '../../../public/buiness-img-11.svg';
+import BusinessImg4 from '../../../public/buiness-img-12.svg';
 import Security from '../../../public/security.svg';
 import Eye from '../../../public/eye.svg';
 import Dollar from '../../../public/dollor.svg';
@@ -27,7 +30,7 @@ export default function Offshore() {
     },
     {
       title: 'Which documents are accepted as proof of residence for offshore incorporation?',
-      des: 'ID Card, UAE Residence visa, utility bills like gas bills etc. (most recent)'
+      des: 'Emmirates ID, Uae Residence Visa or Tourist Visa, Passport'
     },
     {
       title: 'How many countries are there with the avoidance of double taxation policy in the UAE?',
@@ -99,7 +102,7 @@ export default function Offshore() {
               </div>
               <div className="business-steps--item--image">
                 <Image src={Dots} alt='Dots' className='dots-iamge'  />
-                <BusinessImg />
+                <BusinessImg1 />
               </div>
             </div>
             <div className="business-steps--item">
@@ -136,7 +139,7 @@ export default function Offshore() {
               </div>
               <div className="business-steps--item--image">
                 <Image src={Dots} alt='Dots' className='dots-iamge'  />
-                <BusinessImg />
+                <BusinessImg2 />
               </div>
             </div>
             <div className="business-steps--item">
@@ -169,7 +172,7 @@ export default function Offshore() {
               </div>
               <div className="business-steps--item--image">
                 <Image src={Dots} alt='Dots' className='dots-iamge'  />
-                <BusinessImg />
+                <BusinessImg3 />
               </div>
             </div>
             <div className="business-steps--item">
@@ -210,7 +213,7 @@ export default function Offshore() {
               </div>
               <div className="business-steps--item--image">
                 <Image src={Dots} alt='Dots' className='dots-iamge'  />
-                <BusinessImg />
+                <BusinessImg4 />
               </div>
             </div>
           </div>

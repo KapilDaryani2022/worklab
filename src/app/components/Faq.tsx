@@ -15,11 +15,11 @@ const FAQ: FC<FAQProps> = ({ faqData }) => {
                 <p>We have answers to all your questions, here are some of the most Frequently Asked Questions</p>
                 {
                     faqData.map((item: any, index: number) => (
-                        <div className={active === index + 1 ? "faq-item active" : "faq-item"} key={index}>
-                            <div className="faq-item-head">
+                        <div className={active === index + 1 ? "faq-item active" : "faq-item"} key={index} >
+                            <div className="faq-item-head" onClick={() => { active === index + 1 ? setActive(0) : setActive(index + 1)}}>
                                 <p>0{index+1}</p>
                                 <p>{item.title}</p>
-                                <div className="handle-faq" onClick={() => { active === index + 1 ? setActive(0) : setActive(index + 1)}}>
+                                <div className="handle-faq">
                                     <ChevrotDown />
                                 </div>
                             </div>
