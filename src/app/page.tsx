@@ -7,6 +7,7 @@ import Traingle from '../../public/triangle.svg';
 import Rocket from '../../public/rocket.svg';
 import Clouds from '../../public/clouds.svg';
 import TeamWork from '../../public/team-work.svg';
+import Rocket2 from '../../public/rocket-2.svg';
 import Eagle from '../../public/eagle.svg';
 import Buildings from '../../public/builidings.png';
 import Value1 from '../../public/value-1.webp';
@@ -65,7 +66,7 @@ export default function Home() {
           <span className='small-circle'></span>
           <span className='big-circle'></span>
           <div className='animate__animated animate__fadeInUp'>
-            <h1 className="">Swiftly Set Up Your Dream Business in UAE</h1>
+            <h1 className="">Start, Run & <br /> Grow Your Business! <Rocket2 /></h1>
             <p className=''>Experience a hassle-free journey to establish your business in the UAE with our expert guidance.</p>
             <div className="flex ">
               <input placeholder='Your Business Name' value={bName} type="text" name='businessName' onChange={(e) => {setBName(e.target.value)}} />

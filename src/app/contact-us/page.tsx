@@ -25,8 +25,8 @@ export default function ContactUs() {
         }));
     };
     const handleSubmit = (e: any) => {
-        // e.preventDefault();
-        // console.log(formData);
+        e.preventDefault();
+        console.log(formData);
     };
     const handleClear = () => {
         setFormData({
@@ -71,6 +71,17 @@ export default function ContactUs() {
                             />
                         </div>
                         <div>
+                            <label htmlFor="businessName">Business Name</label>
+                            <input
+                            required
+                            type="text"
+                            name='businessName'
+                            placeholder='Enter Business Name'
+                            value={formData.businessName}
+                            onChange={handleChange}
+                            />
+                        </div>
+                        <div>
                             <label htmlFor="email">Email ID</label>
                             <input
                             required
@@ -89,17 +100,6 @@ export default function ContactUs() {
                             name='phone'
                             placeholder='Enter Phone No'
                             value={formData.phone}
-                            onChange={handleChange}
-                            />
-                        </div>
-                        <div>
-                            <label htmlFor="businessName">Business Name</label>
-                            <input
-                            required
-                            type="text"
-                            name='businessName'
-                            placeholder='Enter Business Name'
-                            value={formData.businessName}
                             onChange={handleChange}
                             />
                         </div>

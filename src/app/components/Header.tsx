@@ -31,6 +31,8 @@ const Header: FC = () => {
     useEffect(() => {
         if (active) {
             document.body.classList.add('openNav');
+        } else {
+            document.body.classList.remove('openNav');
         }
     }, [active]);
     return (
