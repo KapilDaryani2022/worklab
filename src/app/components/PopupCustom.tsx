@@ -41,9 +41,9 @@ const PopupCustom: FC = () => {
     }
     return (
         <>
-            {
+            {showPopup && showPopupAlways && !darkFooter ?
                 
-                <div className={showPopup && showPopupAlways && !darkFooter ? 'worklab-icon' : 'worklab-icon none'}>
+                <div className={ 'worklab-icon'}>
                     <div className='cross' onClick={handleCloseModal}>
                         <CrossIcon />
                     </div>
