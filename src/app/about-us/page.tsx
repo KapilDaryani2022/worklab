@@ -80,7 +80,7 @@ export default function AboutUs() {
             <div className="container">
                 <div className="flex">
                     <h2>Global Products</h2>
-                    <p>Our mission at Worklab is not confined to geographical borders. <br/><br/> We're dedicated to supporting products with great market potential in in your home country products. By leveraging our expertise and local insights, we aim to bridge the gap, ensuring these products reach the right audiences. It's about fostering global impact while maintaining a connection to one's roots.</p>
+                    <p>Our mission at Worklab is not confined to geographical borders. <br/><br/> We're dedicated to supporting products with great market potential in your home country products. By leveraging our expertise and local insights, we aim to bridge the gap, ensuring these products reach the right audiences. It's about fostering global impact while maintaining a connection to one's roots.</p>
                 </div>
             </div>
             <Image className='global-projects--boxes' src={StarsImage} alt='/' />

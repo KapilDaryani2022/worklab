@@ -140,7 +140,7 @@ export default function Home() {
       <section className={`section why-dubai ${inView ?'inView' : ''}`} ref={sectionRef}>
         <div className="container">
           <div className="why-dubai--content">
-            <h2 className="">Why Dubai ?!</h2>
+            <h2 className="">Why Dubai ?</h2>
             <p>Where Innovation Meets Limitless Horizons.</p>
             <Link className='learn-more' href='/why-dubai'>{link}</Link>
           </div>

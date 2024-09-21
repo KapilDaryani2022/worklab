@@ -15,6 +15,7 @@ import HeaderIcon6 from '../../../public/header-6.svg'
 import HeaderIcon7 from '../../../public/header-7.svg'
 import ArrowLinkSvg from '../../../public/arrow-link.svg'
 import Loading from '../../../public/loading.gif'
+import Script from 'next/script';
 
 
 const Header: FC = () => {
@@ -35,7 +36,50 @@ const Header: FC = () => {
             document.body.classList.remove('openNav');
         }
     }, [active]);
+    const options = {
+        enabled: true,
+        chatButtonSetting: {
+          backgroundColor: "#0E8730",
+          ctaText: "Chat with us",
+          borderRadius: "25",
+          marginLeft: "0",
+          marginRight: "20",
+          marginBottom: "20",
+          ctaIconWATI: false,
+          position: "right"
+        },
+        brandSetting: {
+          brandName: "Worklab",
+          brandSubTitle: "undefined",
+          brandImg: ArrowLinkSvg,
+          welcomeText: "Hi there!\nHow can I help you?",
+          messageText: "",
+          backgroundColor: "#3b3b3b",
+          ctaText: "Chat with us",
+          borderRadius: "25",
+          autoShow: false,
+          phoneNumber: "971505472769"
+        }
+    };
+    
+    useEffect(() => {
+        // Call the function after the script is loaded
+        if (window.CreateWhatsappChatWidget) {
+          window.CreateWhatsappChatWidget(options);
+        }
+    }, []);
     return (
+        <>
+        <Script
+            src="https://wati-integration-prod-service.clare.ai/v2/watiWidget.js?83145"
+            strategy="lazyOnload"
+            onLoad={() => {
+            // Initialize the widget once the script has loaded
+                if (window.CreateWhatsappChatWidget) {
+                    window.CreateWhatsappChatWidget(options);
+                }
+            }}
+        />
         <header className='animate__animated animate__fadeIn'>
             <div className="container">
                 <div className="flex">
@@ -150,6 +194,7 @@ const Header: FC = () => {
                 </div>
             </div>
         </header>
+    </>
     )
 }
 export default Header;  

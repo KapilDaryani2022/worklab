@@ -3690,3 +3690,13 @@ body.dark-theme {
     transform: translateX(0);
   }
 }
+.wa-chat-box-poweredby, .wa-chat-box-brand {
+  display: none !important;
+}
+.wa-chat-box {
+  min-height: 210px !important;
+  padding-bottom: 30px !important;
+}
+.wa-chat-box .wa-chat-box-content-send-btn {
+  background-color: #3b3b3b !important;
+}
